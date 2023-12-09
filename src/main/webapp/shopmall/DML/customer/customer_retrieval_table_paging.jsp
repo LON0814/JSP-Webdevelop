@@ -200,6 +200,7 @@
   %>
  </table>
 </form> 
-   <a href="./customer_maintenance.jsp">[ 고객정보 관리 ]</a>
+<Br>
+<a href="./customer_maintenance.jsp">[ 고객정보 관리 ]</a>
 </body>
 </html>

@@ -14,8 +14,11 @@
   <!--  가장자리_box -->
   <div id="out_box">
    
-   <div id="header">
-    <b>header</b>
+   <div id="header" style="position: relative;">
+     <div style="position: absolute; top: 5; left: 5;">
+       <img src="images/fortune1.jpg" width="50" height="50" />
+     </div>
+     <h1 style="margin-left: 60px; margin-top: 5px;">운수 좋은 날</h1>
    </div>
   
   <!--  body_left -->
@@ -51,13 +54,13 @@
    <ul id="menu_ul">
    <% 
    if (login) { // 로그인 경우 메뉴
-	   out.print("<li><a href='../DML/customer/customer_update_form.jsp'" + "target='_parent'>회원정보 갱신</a></li>");
+	   out.print("<li><a href='../DML/customer/customer_maintenance.jsp'" + "target='_parent'>고객정보 관리</a></li>");
    } else {     // 로그아웃 경우 메뉴
 	   out.print("<li><a href='../DML/customer/customer_insert_form.jsp'" + "target='_parent'>회원가입</a></li>");
    }
    %>
-    <li><a href="../DML/order_sale/ShopMallMain.jsp" target="_blank">상품검색</a></li>
-    <li><a href="../DML/post_list/post_list.jsp" target="_blank">게시판</a></li>
+    <li><a href="../DML/order_sale/ShopMallMain.jsp" target="_parent">상품검색</a></li>
+    <li><a href="../DML/post_list/post_list.jsp" target="_parent">게시판</a></li>
     <% 
     String userType = (String) session.getAttribute("userType");
     // userType이 null이거나 "admin"이 아닌 경우 접근 거부
@@ -68,6 +71,7 @@
     }
     %>
    </ul>
+   
   </div>
   
   <!-- body_right -->
@@ -85,7 +89,7 @@
   
   <!--  footer -->
   <div id="footer">
-   <b>footer</b>
+   Copyright (c) 2023 Web Shop
   </div>
  </div>
 </body>

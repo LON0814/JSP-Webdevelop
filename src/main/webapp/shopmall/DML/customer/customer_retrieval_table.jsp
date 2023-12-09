@@ -108,6 +108,8 @@
     DbConnClose.resourceClose(rset, stmt, conn);
   }
 %>
+<Br>
+<a href="./customer_maintenance.jsp">[ 고객정보 관리 ]</a></td>
 
 </body>
 </html>
